@@ -2,3 +2,4 @@
 *.csv
 data/node2name.json
 data/clickstream.parque
+*.pyc
