@@ -4,13 +4,13 @@ from train_model import train_lfm
 
 
 def optimizer_exp(K: int, experiment_name: str, run_name: str) -> None:
-    # взял из прошлой домашки (лучше подгружать из mlflow, а не хардкодить)
+    # взял из оптуны (лучше подгружать из mlflow, а не хардкодить)
     optuna_best_params = {
-        'BATCH_SIZE': 68114,
-        'NUM_NEGATIVES': 18,
-        'EDIM': 329,
-        'EPOCH': 14,
-        'LR': 5.106820625932442
+        'BATCH_SIZE': 4443,
+        'NUM_NEGATIVES': 12,
+        'EDIM': 170,
+        'EPOCH': 19,
+        'LR': 0.028289593099074674
     }
 
     # подгружаем данные

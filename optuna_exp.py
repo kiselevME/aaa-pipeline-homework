@@ -45,6 +45,7 @@ def objective_with_params(
         K=K,
         run_name=f'{run_name}-{trial.number}',
         experiment_name=experiment_name,
+        config=config
     )
     return precision_at_K
 

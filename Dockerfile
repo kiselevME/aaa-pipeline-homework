@@ -12,3 +12,4 @@ RUN pip3 install --no-cache-dir -r $WORKDIR/requirements.txt
 
 COPY . $WORKDIR
 ENTRYPOINT ["python", "main.py"]
+# RUN PYTHONPATH="$WORKDIR:$PYTHONPATH"
