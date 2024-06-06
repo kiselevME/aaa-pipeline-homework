@@ -3,13 +3,14 @@ from train_model import train_lfm
 
 
 def best_model(K: int, experiment_name: str, run_name: str) -> None:
-    # взял из оптуны (лучше подгружать из mlflow, а не хардкодить)
-    optuna_best_params = {
+    # взял из эксперимента с оптимизаторами (лучший – AdamW)
+    config = {
         'BATCH_SIZE': 4443,
         'NUM_NEGATIVES': 12,
         'EDIM': 170,
         'EPOCH': 19,
-        'LR': 0.028289593099074674
+        'LR': 0.028289593099074674,
+        'OPTIMIZER_NAME': 'AdamW'
     }
 
     # подгружаем данные
@@ -24,7 +25,6 @@ def best_model(K: int, experiment_name: str, run_name: str) -> None:
         agg(lambda x: list(set(x)))
 
     # Adam уже есть
-    config = {**optuna_best_params, 'OPTIMIZER_NAME': 'Adam'}
     model = train_lfm(
         config=config,
         df_train=df_train,

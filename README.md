@@ -1,5 +1,8 @@
 # aaa-pipeline-hw
 
+## Результаты запусков: [MLflow](http://84.201.128.89:90/#/experiments/26?searchFilter=&orderByKey=attributes.start_time&orderByAsc=false&startTime=ALL&lifecycleFilter=Active&modelVersionFilter=All+Runs&datasetsFilter=W10%3D)
+
+
 Запуск из консоли (без сборки докер-образа):
 - baseline: `python main.py --experiment_name='homework-pipeline-mekiselev' --run_name='baseline' --model='baseline'`
 - optuna experiment: `python main.py --experiment_name='homework-pipeline-mekiselev' --run_name='optuna' --model='lfm' --optimizer='Adam'`
